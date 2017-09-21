@@ -13,7 +13,7 @@ docker run --rm -it honzabrecka/lumo:1.8.0-beta bash
 > boot -d funcool/promesa:1.9.0
 > lumo -D "funcool/promesa:1.9.0"
 >> (require '[promesa.core :as p])
->> (def fetch (js/require "node-fetch"))
+>> (require '[node-fetch :as fetch])
 >> (p/then
      (fetch "https://honzabrecka.com/api/status")
      #(println (.. % -status)))
